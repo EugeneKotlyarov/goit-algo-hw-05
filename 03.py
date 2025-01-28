@@ -14,8 +14,8 @@ def main():
     with open(file2_path) as f:
         text2 = f.read()
 
-    pattern_existing = "алгоритми"
-    pattern_fabricated = "неіснуючийпідрядок"
+    pattern_existing = "неефективність"
+    pattern_fabricated = "щось трохи вигадане"
 
     results = {"Article 1": {}, "Article 2": {}}
 
