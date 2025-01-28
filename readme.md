@@ -7,7 +7,7 @@ The algorithms were measured using the `timeit` module to determine their execut
 
 ## Results
 
-### Article 1
+###  1
 - **Boyer-Moore**:
   - Existing substring: 0.000090 seconds
   - Fabricated substring: 0.001896 seconds
