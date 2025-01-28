@@ -1,46 +1,19 @@
-# Performance Analysis of Substring Search Algorithms
+# Порівняння продуктивності пошуку підрядку у тексті за допомогою алгоритмів Боєр-Мура, Кнута-Морріса-Пратта та Рабіна-Карпа
 
-## Overview
-This document provides a comparison of three substring search algorithms—Boyer-Moore, Knuth-Morris-Pratt (KMP), and Rabin-Karp—evaluated on two text files for two types of substrings: one that exists in the text and one that does not.
+## Результати тестування
 
-The algorithms were measured using the `timeit` module to determine their execution times.
+### Стаття 1
+| Алгоритм | Боєр-Мур | Кнут-Морріс-Пратт | Рабін-Карп |
+|----------|----------|--------------------|------------|
+| Існуюче | _0.000089_ | 0.000220 | 0.000465 |
+| Вигадане | _0.002111_ | 0.010856 | 0.021060 |
 
-## Results
+### Стаття 1
+| Алгоритм | Боєр-Мур | Кнут-Морріс-Пратт | Рабін-Карп |
+|----------|----------|--------------------|------------|
+| Існуюче | _0.000084_ | 0.000213 | 0.000482 |
+| Вигадане | _0.001959_ | 0.009597 | 0.021060 |
 
-### Article 1
-- **Boyer-Moore**:
-  - Existing substring: 0.000090 seconds
-  - Fabricated substring: 0.001896 seconds
-- **Knuth-Morris-Pratt**:
-  - Existing substring: 0.000243 seconds
-  - Fabricated substring: 0.010746 seconds
-- **Rabin-Karp**:
-  - Existing substring: 0.000505 seconds
-  - Fabricated substring: 0.021680 seconds
+## Висновки
 
-### Article 2
-- **Boyer-Moore**:
-  - Existing substring: 0.004831 seconds
-  - Fabricated substring: 0.002806 seconds
-- **Knuth-Morris-Pratt**:
-  - Existing substring: 0.015427 seconds
-  - Fabricated substring: 0.015265 seconds
-- **Rabin-Karp**:
-  - Existing substring: 0.030045 seconds
-  - Fabricated substring: 0.029794 seconds
-
-## Conclusions
-
-### Per-Article Analysis
-1. **Article 1**:
-   - The fastest algorithm for the existing substring was **Boyer-Moore**.
-   - The fastest algorithm for the fabricated substring was also **Boyer-Moore**.
-
-2. **Article 2**:
-   - The fastest algorithm for the existing substring was **Boyer-Moore**.
-   - The fastest algorithm for the fabricated substring was **Boyer-Moore**.
-
-### Overall Analysis
-- **Boyer-Moore** consistently outperformed the other algorithms for both existing and fabricated substrings in both articles.
-- **Knuth-Morris-Pratt** demonstrated moderate performance but was slower than Boyer-Moore.
-- **Rabin-Karp** was the slowest algorithm across all tests, particularly for fabricated substrings.
+На наданих статтях одноособним лідером пошуку є алгоритм Боєра-Мура
